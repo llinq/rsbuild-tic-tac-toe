@@ -25,6 +25,14 @@ body {
   opacity: 0.5;
 }
 
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: max-content;
+  margin: 0 auto;
+}
+
 .square {
   width: 100px;
   height: 100px;
@@ -34,5 +42,5 @@ body {
   color: white;
   font-size: 2rem;
   cursor: pointer;
-  margin: 8px;
+  margin: 0; /* grid gap handles spacing */
 }

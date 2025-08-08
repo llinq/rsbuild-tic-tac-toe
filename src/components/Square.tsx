@@ -1,18 +1,12 @@
 import { Fragment } from "react/jsx-runtime";
-import type { Value } from "../types";
+import type { SquareType } from "../types";
 
-type SquareProps = {
-    index: number;
-    value: Value | null;
-    onClick: (index: number) => void;
-};
-
-export default function Square({ value, index, onClick }: SquareProps) {
+export default function Square({ value, onClick }: SquareType) {
     return (
         <button
             className="square"
             disabled={!!value}
-            onClick={() => onClick(index)}
+            onClick={onClick}
         >
             {value ?? <Fragment>&nbsp;</Fragment>}
         </button>
